@@ -233,3 +233,83 @@ body {
         left: 25px;
     }
 }
+
+/* -------------------------
+   Scan resultaat
+------------------------- */
+
+.error {
+    position: absolute;
+
+    top: 470px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #b3261e;
+    font-weight: bold;
+}
+
+.result {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 85%;
+    max-width: 850px;
+    max-height: 80vh;
+
+    overflow-y: auto;
+
+    background-color: #ffffff;
+
+    border-radius: 30px;
+    padding: 30px;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+
+    z-index: 10;
+}
+
+.result h2 {
+    margin-bottom: 8px;
+}
+
+.result h2.ok { color: #1a7f4b; }
+.result h2.bad { color: #b3261e; }
+
+#score {
+    font-size: 22px;
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+#details {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+
+    gap: 4px 16px;
+
+    margin-bottom: 12px;
+}
+
+#details dt { color: #5c6673; }
+#details dd { margin: 0; word-break: break-all; }
+
+#checks h3 { margin-top: 16px; }
+#checks h4 { margin: 10px 0 4px; }
+#checks ul { padding-left: 20px; }
+
+#checks li.present { color: #1a7f4b; }
+#checks li.partial { color: #a06400; }
+#checks li.absent { color: #b3261e; }
+#checks li.unsure { color: #5c6673; font-style: italic; }
+
+@media (max-width: 700px) {
+    .error { top: 440px; }
+    .result { width: 92%; padding: 20px; }
+}

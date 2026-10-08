@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WebRate</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Logo -->
+  <div class="logo">
+    <span>WebRate</span>
+  </div>
+
+  <!-- History button -->
+  <button class="history-button" type="button">
+    View History
+    <span>▼</span>
+  </button>
+
+  <!-- Main form -->
+  <form id="scan-form" class="form">
+    <input id="url" type="text" placeholder="URL" autocomplete="url" required>
+    <input id="company" type="text" placeholder="Bedrijf">
+    <input id="city" type="text" placeholder="Plaats">
+    <button id="scan-btn" class="scan-button" type="submit">Scan</button>
+  </form>
+
+  <!-- Foutmelding -->
+  <p id="error" class="error" role="alert" hidden></p>
+
+  <!-- Resultaat van de scan -->
+  <section id="result" class="result" aria-live="polite" hidden>
+    <h2 id="status"></h2>
+    <p id="score"></p>
+    <dl id="details"></dl>
+    <div id="checks"></div>
+  </section>
+
+  <!-- Information button -->
+  <button class="info-button" type="button">i</button>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
