@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cfe8a9;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+
+    width: 95%;
+    max-width: 1250px;
+    height: 90vh;
+
+    background-color: #e0f1c8;
+
+    border-radius: 40px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* -------------------------
+   WebRate logo
+------------------------- */
+
+.logo {
+    position: absolute;
+
+    top: 45px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.logo span {
+    font-size: 70px;
+    font-weight: 900;
+
+    color: white;
+
+    text-shadow:
+            3px 3px 0 #c9a5e8,
+            5px 5px 10px rgba(100, 0, 150, 0.4);
+}
+
+/* -------------------------
+   History button
+------------------------- */
+
+.history-button {
+    position: absolute;
+
+    top: 135px;
+    right: 60px;
+
+    width: 220px;
+    height: 45px;
+
+    border: none;
+    border-radius: 15px;
+
+    background-color: #8c00e8;
+
+    color: white;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.history-button span {
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+/* -------------------------
+   Form
+------------------------- */
+
+.form {
+    position: absolute;
+
+    top: 180px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 32px;
+}
+
+.form input {
+    width: 100%;
+    height: 65px;
+
+    border: none;
+    border-radius: 25px;
+
+    background-color: white;
+
+    text-align: center;
+
+    font-size: 22px;
+
+    outline: none;
+
+    box-shadow:
+            0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form input::placeholder {
+    color: #999;
+}
+
+.form input:focus {
+    box-shadow:
+            0 0 0 3px rgba(140, 0, 232, 0.2);
+}
+
+/* -------------------------
+   Scan button
+------------------------- */
+
+.scan-button {
+    width: 230px;
+    height: 50px;
+
+    border: none;
+    border-radius: 15px;
+
+    background-color: #67b9da;
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    box-shadow:
+            0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+.scan-button:hover {
+    background-color: #54a9cb;
+}
+
+/* -------------------------
+   Information button
+------------------------- */
+
+.info-button {
+    position: absolute;
+
+    bottom: 20px;
+    left: 50px;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 15px;
+
+    background-color: #c6e5a2;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    box-shadow:
+            0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* -------------------------
+   Responsive
+------------------------- */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 95%;
+        height: 95vh;
+
+        border-radius: 25px;
+    }
+
+    .logo span {
+        font-size: 45px;
+    }
+
+    .history-button {
+        top: 120px;
+        right: 25px;
+
+        width: 160px;
+
+        font-size: 16px;
+    }
+
+    .form {
+        width: 80%;
+        top: 190px;
+    }
+
+    .form input {
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .scan-button {
+        width: 200px;
+    }
+
+    .info-button {
+        left: 25px;
+    }
+}
